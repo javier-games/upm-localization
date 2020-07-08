@@ -1,4 +1,4 @@
-namespace BricksBucket.Localization.Standardization
+namespace BricksBucket.Global.Standardization
 {
 	/// <!-- Standards -->
 	/// 

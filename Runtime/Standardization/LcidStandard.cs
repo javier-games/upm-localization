@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Globalization;
 // ReSharper disable StringLiteralTypo
 
-namespace BricksBucket.Localization.Standardization
+namespace BricksBucket.Global.Standardization
 {
 	// LCID Part.
 	// By Javier García | @jvrgms | 2020

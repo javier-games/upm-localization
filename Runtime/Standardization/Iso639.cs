@@ -1,6 +1,6 @@
 ﻿// ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
-namespace BricksBucket.Localization.Standardization
+namespace BricksBucket.Global.Standardization
 {
 	/// <!-- Iso639 -->
 	///
@@ -26,7 +26,6 @@ namespace BricksBucket.Localization.Standardization
 	///
 	/// <seealso cref="Iso3166"/>
 	/// <seealso cref="Lcid"/>
-	/// <seealso cref="BricksBucket.Localization.Culture"/>
 	/// 
 	/// <!-- Note: The code of the members of the enum have been generated with
 	/// the following table: https://bit.ly/bb-localization-iso639. Notice that

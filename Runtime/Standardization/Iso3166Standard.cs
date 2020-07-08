@@ -1,4 +1,4 @@
-namespace BricksBucket.Localization.Standardization
+namespace BricksBucket.Global.Standardization
 {
 	// ISO 3166 Part.
 	// By Javier García | @jvrgms | 2020

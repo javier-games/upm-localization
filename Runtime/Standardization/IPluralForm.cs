@@ -1,4 +1,5 @@
-namespace BricksBucket.Localization.Standardization
+// ReSharper disable UnusedMemberInSuper.Global
+namespace BricksBucket.Global.Standardization
 {
 	/// <!-- IPluralForm -->
 	///

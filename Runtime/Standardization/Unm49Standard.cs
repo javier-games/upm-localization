@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 // ReSharper disable StringLiteralTypo
 
-namespace BricksBucket.Localization.Standardization
+namespace BricksBucket.Global.Standardization
 {
 	// UN M49 Part.
 	// By Javier García | @jvrgms | 2020

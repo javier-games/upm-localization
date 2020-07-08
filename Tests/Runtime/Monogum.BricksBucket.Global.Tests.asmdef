@@ -1,12 +1,11 @@
 {
-    "name": "Monogum.BricksBucket.Localization.Editor.Tests",
+    "name": "Monogum.BricksBucket.Gloabal.Tests",
     "references": [
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "UnityEditor.TestRunner",
+        "Monogum.BricksBucket.Global"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,

@@ -1,5 +1,5 @@
 {
-    "name": "Monogum.BricksBucket.Localization",
+    "name": "Monogum.BricksBucket.Global",
     "references": [
         "GUID:8e275888f7893418e8887b593faa5a02"
     ],

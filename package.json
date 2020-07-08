@@ -1,7 +1,7 @@
 {
-  "name": "games.monogum.bricksbucket.localization",
+  "name": "games.monogum.bricksbucket.global",
   "version": "0.0.0",
-  "displayName": "Bricks Bucket Localization Package",
+  "displayName": "Bricks Bucket Global Package",
   "description": "Bucket full of bricks to build something great.",
   "unity": "2019.4",
   "unityRelease": "1f1",

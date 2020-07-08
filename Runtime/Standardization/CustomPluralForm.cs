@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace BricksBucket.Localization.Standardization
+namespace BricksBucket.Global.Standardization
 {
 	/// <!-- CustomPluralForm -->
 	///
@@ -12,7 +12,7 @@ namespace BricksBucket.Localization.Standardization
 	/// <see cref="Count"/> property and the <see cref="Evaluate"/> method.
 	/// </summary>
 	///
-	/// <seealso cref="BricksBucket.Localization.Standardization.PluralForm"/>
+	/// <seealso cref="BricksBucket.Global.Standardization.PluralForm"/>
 	/// 
 	/// <!-- By Javier García | @jvrgms | 2020 -->
 	public abstract class CustomPluralForm : ScriptableObject, IPluralForm

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BricksBucket.Localization.Standardization
+namespace BricksBucket.Global.Standardization
 {
 	/// <!-- PluralForm -->
 	/// 

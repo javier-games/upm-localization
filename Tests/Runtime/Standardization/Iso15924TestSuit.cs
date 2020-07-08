@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace BricksBucket.Localization.Standardization.Tests
+namespace BricksBucket.Global.Standardization.Tests
 {
 	/// <!-- Iso15924TestSuit -->
 	/// 

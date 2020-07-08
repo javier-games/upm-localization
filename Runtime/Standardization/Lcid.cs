@@ -1,6 +1,6 @@
 // ReSharper disable IdentifierTypo
 // ReSharper disable CommentTypo
-namespace BricksBucket.Localization.Standardization
+namespace BricksBucket.Global.Standardization
 {
 	/// <!-- Lcid -->
 	///

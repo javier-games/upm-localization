@@ -1,7 +1,7 @@
 using System.Globalization;
 using NUnit.Framework;
 
-namespace BricksBucket.Localization.Standardization.Tests
+namespace BricksBucket.Global.Standardization.Tests
 {
     /// <!-- LcidTestSuit -->
     /// 
