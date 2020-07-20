@@ -1,6 +1,6 @@
 namespace BricksBucket.Global.Standardization
 {
-	/// <!-- Standards -->
+	/// <!-- Standard -->
 	/// 
 	/// <summary>
 	/// Defines useful methods to work with the LCID, ISO 15924, ISO 639,
@@ -14,5 +14,5 @@ namespace BricksBucket.Global.Standardization
 	/// <seealso cref="Unm49"/>
 	/// 
 	/// <!-- By Javier García | @jvrgms | 2020 -->
-	public static partial class Standards { }
+	public static partial class Standard { }
 }

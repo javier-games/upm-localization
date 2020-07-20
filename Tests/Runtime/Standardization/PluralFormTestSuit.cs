@@ -9,7 +9,7 @@ namespace BricksBucket.Global.Standardization.Tests
     /// </summary>
     /// 
     /// <seealso cref="PluralForm"/>
-    /// <seealso cref="Standards"/>
+    /// <seealso cref="Standard"/>
     /// 
     /// <!-- By Javier García | @jvrgms | 2020 -->
     public class PluralFormTestSuit

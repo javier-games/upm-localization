@@ -1,7 +1,9 @@
 {
     "name": "Monogum.BricksBucket.Global.Editor",
     "references": [],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

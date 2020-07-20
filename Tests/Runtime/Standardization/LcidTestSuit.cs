@@ -10,7 +10,7 @@ namespace BricksBucket.Global.Standardization.Tests
     /// </summary>
     /// 
     /// <seealso cref="Lcid"/>
-    /// <seealso cref="Standards"/>
+    /// <seealso cref="Standard"/>
     /// <seealso href=
     /// "https://docs.microsoft.com/dotnet/api/system.globalization">
     /// System.Globalization</seealso>
@@ -21,14 +21,14 @@ namespace BricksBucket.Global.Standardization.Tests
         /// <summary>
         /// Tests the response to a not valid values in the following methods.
         /// <list type="bullet">
-        /// <item><see cref="Standards.GetName(Lcid)"/></item>
-        /// <item><see cref="Standards.GetCode(Lcid)"/></item>
-        /// <item><see cref="Standards.GetIso639(Lcid)"/></item>
-        /// <item><see cref="Standards.GetUnm49(Lcid)"/></item>
-        /// <item><see cref="Standards.GetIso3166(Lcid)"/></item>
-        /// <item><see cref="Standards.GetCultureInfo(Lcid)"/></item>
+        /// <item><see cref="Standard.GetName(Lcid)"/></item>
+        /// <item><see cref="Standard.GetCode(Lcid)"/></item>
+        /// <item><see cref="Standard.GetIso639(Lcid)"/></item>
+        /// <item><see cref="Standard.GetUnm49(Lcid)"/></item>
+        /// <item><see cref="Standard.GetIso3166(Lcid)"/></item>
+        /// <item><see cref="Standard.GetCultureInfo(Lcid)"/></item>
         /// <item><see cref=
-        /// "Standards.GetLcid(Iso639, Unm49, Iso15924, string)"/></item>
+        /// "Standard.GetLcid(Iso639, Unm49, Iso15924, string)"/></item>
         /// </list>
         /// </summary>
         [Test]
@@ -40,14 +40,14 @@ namespace BricksBucket.Global.Standardization.Tests
             const Iso15924 fakeScript = (Iso15924) (-1);
             
             // Test Name for a non LCID enum member.
-            var name = Standards.GetName (fakeLcid);
+            var name = Standard.GetName (fakeLcid);
             Assert.IsTrue (
                 string.IsNullOrEmpty (name),
                 "Invalid code for a non enum member (-1): " + name
             );
             
             // Test Code for a non LCID enum member.
-            var code = Standards.GetCode (fakeLcid);
+            var code = Standard.GetCode (fakeLcid);
             Assert.IsTrue (
                 string.IsNullOrEmpty (code),
                 "Invalid code for a non enum member (-1): " + code
@@ -55,44 +55,44 @@ namespace BricksBucket.Global.Standardization.Tests
             
             // Test get ISO 639 from a non LCID enum member.
             Assert.IsTrue (
-                Standards.GetIso639 (fakeLcid) == Iso639.NONE,
+                Standard.GetIso639 (fakeLcid) == Iso639.NONE,
                 "Wrong ISO 639 from a non LCID value."
             );
             
             // Test get UN M.49 from a non LCID enum member.
             Assert.IsTrue (
-                Standards.GetUnm49 (fakeLcid) == Unm49.NONE,
+                Standard.GetUnm49 (fakeLcid) == Unm49.NONE,
                 "Wrong UN M.49 from a non LCID value."
             );
             
             // Test get ISO 639 from a non LCID enum member.
             Assert.IsTrue (
-                Standards.GetIso3166 (fakeLcid) == Iso3166.NONE,
+                Standard.GetIso3166 (fakeLcid) == Iso3166.NONE,
                 "Wrong ISO ISO 3166 from a non LCID value."
             );
             
             // Test get Culture Info for non enum member-
             Assert.IsTrue (
-                Standards.GetCultureInfo (fakeLcid) == null,
+                Standard.GetCultureInfo (fakeLcid) == null,
                 "Wrong get culture method for non enum members."
             );
 
             // Test get LCID from non enum members.
             Assert.IsTrue (
-                Standards.GetLcid (fakeLanguage) == Lcid.NONE,
+                Standard.GetLcid (fakeLanguage) == Lcid.NONE,
                 "Wrong LCID for a non ISO 639 enum member."
             );
             Assert.IsTrue (
-                Standards.GetLcid (fakeLanguage, fakeRegion) == Lcid.NONE,
+                Standard.GetLcid (fakeLanguage, fakeRegion) == Lcid.NONE,
                 "Wrong LCID for a non UN M.49 enum member."
             );
             Assert.IsTrue (
-                Standards.GetLcid (fakeLanguage, Unm49.NONE, fakeScript) ==
+                Standard.GetLcid (fakeLanguage, Unm49.NONE, fakeScript) ==
                 Lcid.NONE,
                 "Wrong LCID for a non ISO 15924 enum member."
             );
             Assert.IsTrue (
-                Standards.GetLcid (fakeLanguage, fakeRegion, fakeScript) ==
+                Standard.GetLcid (fakeLanguage, fakeRegion, fakeScript) ==
                 Lcid.NONE,
                 "Wrong LCID for a non enum members."
             );
@@ -102,10 +102,10 @@ namespace BricksBucket.Global.Standardization.Tests
         /// Tests each enum member from the <see cref="Lcid">LCID</see>
         /// enum for the following methods.
         /// <list type="bullet">
-        /// <item><see cref="Standards.GetName(Lcid)"/></item>
-        /// <item><see cref="Standards.GetCode(Lcid)"/></item>
-        /// <item><see cref="Standards.GetCultureInfo(Lcid)"/></item>
-        /// <item><see cref="Standards.GetLcid(string)"/></item>
+        /// <item><see cref="Standard.GetName(Lcid)"/></item>
+        /// <item><see cref="Standard.GetCode(Lcid)"/></item>
+        /// <item><see cref="Standard.GetCultureInfo(Lcid)"/></item>
+        /// <item><see cref="Standard.GetLcid(string)"/></item>
         /// </list>
         /// </summary>
         [Test]
@@ -117,14 +117,14 @@ namespace BricksBucket.Global.Standardization.Tests
                 var value = (Lcid)values.GetValue (i);
                 
                 // Test Name.
-                var name = Standards.GetName (value);
+                var name = Standard.GetName (value);
                 Assert.IsFalse (
                     string.IsNullOrEmpty (name),
                     value + " has not a name."
                 );
                 
                 // Test Code.
-                var code = Standards.GetCode (value);
+                var code = Standard.GetCode (value);
                 Assert.IsFalse (
                     string.IsNullOrEmpty (code),
                     value + " has not code."
@@ -132,9 +132,9 @@ namespace BricksBucket.Global.Standardization.Tests
                 if (value == Lcid.NONE || value == Lcid.INVARIANT) continue;
                 
                 // Test Culture Info.
-                var cultureInfo = Standards.GetCultureInfo (value);
+                var cultureInfo = Standard.GetCultureInfo (value);
                 Assert.IsTrue (
-                    Standards.GetLcid (cultureInfo.Name) == value,
+                    Standard.GetLcid (cultureInfo.Name) == value,
                     value + " different from " + cultureInfo.Name
                 );
             }
@@ -145,8 +145,8 @@ namespace BricksBucket.Global.Standardization.Tests
         /// http://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo
         /// ">Culture Info</see> class for the following methods.
         /// <list type="bullet">
-        /// <item><see cref="Standards.GetLcid(string)"/></item>
-        /// <item><see cref="Standards.GetCultureInfo(Lcid)"/></item>
+        /// <item><see cref="Standard.GetLcid(string)"/></item>
+        /// <item><see cref="Standard.GetCultureInfo(Lcid)"/></item>
         /// </list>
         /// </summary>
         [Test]
@@ -155,9 +155,9 @@ namespace BricksBucket.Global.Standardization.Tests
             var cultures = CultureInfo.GetCultures (CultureTypes.AllCultures);
             for (int i = 0; i < cultures.Length; i++)
             {
-                var lcid = Standards.GetLcid (cultures[i].Name);
-                var culture = Standards.GetCultureInfo (lcid);
-                var lcidFromCulture = Standards.GetLcid (culture.Name);
+                var lcid = Standard.GetLcid (cultures[i].Name);
+                var culture = Standard.GetCultureInfo (lcid);
+                var lcidFromCulture = Standard.GetLcid (culture.Name);
 
                 Assert.IsTrue (
                     lcid == lcidFromCulture,

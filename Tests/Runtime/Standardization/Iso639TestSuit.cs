@@ -9,7 +9,7 @@ namespace BricksBucket.Global.Standardization.Tests
 	/// </summary>
 	/// 
 	/// <seealso cref="Iso639"/>
-	/// <seealso cref="Standards"/>
+	/// <seealso cref="Standard"/>
 	/// 
 	/// <!-- By Javier García | @jvrgms | 2020 -->
 	public class Iso639TestSuit
@@ -17,11 +17,11 @@ namespace BricksBucket.Global.Standardization.Tests
         /// <summary>
         /// Tests the response to a not valid values in the following methods.
         /// <list type="bullet">
-        /// <item><see cref="Standards.GetName(Iso639)"/></item>
-        /// <item><see cref="Standards.GetCode(Iso639)"/></item>
-        /// <item><see cref="Standards.GetIso639(string)"/></item>
-        /// <item><see cref="Standards.GetIso15924(Iso639)"/></item>
-        /// <item><see cref="Standards.GetPluralForm(Iso639)"/></item>
+        /// <item><see cref="Standard.GetName(Iso639)"/></item>
+        /// <item><see cref="Standard.GetCode(Iso639)"/></item>
+        /// <item><see cref="Standard.GetIso639(string)"/></item>
+        /// <item><see cref="Standard.GetIso15924(Iso639)"/></item>
+        /// <item><see cref="Standard.GetPluralForm(Iso639)"/></item>
         /// </list>
         /// </summary>
         [Test]
@@ -29,14 +29,14 @@ namespace BricksBucket.Global.Standardization.Tests
         {
             // Test Name for a non ISO 639 enum member.
             const Iso639 fakeValue = (Iso639) (-1);
-            var name = Standards.GetName (fakeValue);
+            var name = Standard.GetName (fakeValue);
             Assert.IsTrue (
                 string.IsNullOrEmpty (name),
                 "Invalid code for not enum member (-1): " + name
             );
             
             // Test Code for a non ISO 639 enum member.
-            var code = Standards.GetCode (fakeValue);
+            var code = Standard.GetCode (fakeValue);
             Assert.IsTrue (
                 string.IsNullOrEmpty (code),
                 "Invalid code for not enum member (-1): " + code
@@ -44,25 +44,25 @@ namespace BricksBucket.Global.Standardization.Tests
             
             // Test Parse for not valid ISO 639 enum member.
             Assert.IsTrue (
-                Standards.GetIso639 ("Invalid Code") == Iso639.NONE,
+                Standard.GetIso639 ("Invalid Code") == Iso639.NONE,
                 "Wrong parse method for not valid string."
             );
             
             // Test Parse for Lower Case code.
             Assert.IsTrue (
-                Standards.GetIso639 ("en") == Iso639.EN,
+                Standard.GetIso639 ("en") == Iso639.EN,
                 "Wrong parse method for \"en\"."
             );
             
             // Test Parse for Mixed Case code.
             Assert.IsTrue (
-                Standards.GetIso639 ("eN") == Iso639.EN,
+                Standard.GetIso639 ("eN") == Iso639.EN,
                 "Wrong parse method for \"eN\"."
             );
             
             // Test Wrong ISO 15924 for not ISO 639 enum member.
             Assert.IsTrue (
-                Standards.GetIso15924 (fakeValue) == Iso15924.NONE,
+                Standard.GetIso15924 (fakeValue) == Iso15924.NONE,
                 "Wrong ISO 15924 for not enum member (-1)."
             );
         }
@@ -72,10 +72,10 @@ namespace BricksBucket.Global.Standardization.Tests
         /// Tests each enum member from the <see cref="Iso639">ISO 639</see>
         /// enum for the following methods.
         /// <list type="bullet">
-        /// <item><see cref="Standards.GetName(Iso639)"/></item>
-        /// <item><see cref="Standards.GetCode(Iso639)"/></item>
-        /// <item><see cref="Standards.GetIso639(string)"/></item>
-        /// <item><see cref="Standards.GetPluralForm(Iso639)"/></item>
+        /// <item><see cref="Standard.GetName(Iso639)"/></item>
+        /// <item><see cref="Standard.GetCode(Iso639)"/></item>
+        /// <item><see cref="Standard.GetIso639(string)"/></item>
+        /// <item><see cref="Standard.GetPluralForm(Iso639)"/></item>
         /// </list>
         /// </summary>
         [Test]
@@ -88,14 +88,14 @@ namespace BricksBucket.Global.Standardization.Tests
                 var iso = (Iso639)values.GetValue (i);
                 
                 // Test Name.
-                var name = Standards.GetName (iso);
+                var name = Standard.GetName (iso);
                 Assert.IsFalse (
                     string.IsNullOrEmpty (name),
                     iso + " has not a name."
                 );
                 
                 // Test Code.
-                var code = Standards.GetCode (iso);
+                var code = Standard.GetCode (iso);
                 Assert.IsFalse (
                     string.IsNullOrEmpty (code),
                     iso + " has not code."
@@ -103,12 +103,12 @@ namespace BricksBucket.Global.Standardization.Tests
                 
                 // Test Parse.
                 Assert.IsTrue(
-                    iso == Standards.GetIso639 (code),
+                    iso == Standard.GetIso639 (code),
                     iso + " wrong parse method."
                 );
 
                 // Test Plural Form.
-                var pluralForm = Standards.GetPluralForm (iso);
+                var pluralForm = Standard.GetPluralForm (iso);
                 if (pluralForm != null)
                 {
                     Assert.IsTrue (

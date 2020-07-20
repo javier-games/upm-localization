@@ -6,7 +6,7 @@ namespace BricksBucket.Global.Standardization
 	/// Enumerates types of directions to write scripts.
 	/// </summary>
 	/// 
-	/// <seealso cref="Standards" />
+	/// <seealso cref="Standard" />
 	/// <seealso cref="Iso15924"/>
 	/// 
 	/// <!-- By Javier García | @jvrgms | 2020 -->

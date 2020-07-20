@@ -5,7 +5,7 @@ namespace BricksBucket.Global.Standardization
 {
 	// ISO 639 Part.
 	// By Javier García | @jvrgms | 2020
-	public static partial class Standards
+	public static partial class Standard
 	{
 		/// <summary>
 		/// Gets the name of the given ISO 639 enum value.
