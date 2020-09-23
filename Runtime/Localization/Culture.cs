@@ -19,6 +19,20 @@ namespace BricksBucket.Global.Localization
 		#region Fields
 
 		/// <summary>
+		/// Code to identify localizations related to this culture.
+		/// </summary>
+		[SerializeField]
+		[Tooltip ("Code to identify language category.")]
+		private string m_code;
+
+		/// <summary>
+		/// Name of culture, useful to displays the culture instead fo its code.
+		/// </summary>
+		[SerializeField]
+		[Tooltip ("Name for language category.")]
+		private string m_name;
+
+		/// <summary>
 		/// Language code from the <see href=
 		/// "https://www.iso.org/iso-639-language-codes.html">ISO 639-1</see>
 		/// standard.
@@ -33,6 +47,14 @@ namespace BricksBucket.Global.Localization
 		[SerializeField]
 		[Tooltip ("Specifies a different script from the default script.")]
 		private Iso15924 m_script;
+
+		/// <summary>
+		/// Country code from the <see href=
+		/// "https://www.iso.org/standard/63545.html">ISO 3166</see> standard.
+		/// </summary>
+		[SerializeField]
+		[Tooltip ("Country ISO-3166")]
+		private Iso3166 m_country;
 
 		/// <summary>
 		/// Area code used by the United Nations UN M49 standard.
@@ -54,8 +76,15 @@ namespace BricksBucket.Global.Localization
 		[SerializeField]
 		[Tooltip ("Custom plural form for the language.")]
 		private CustomPluralForm m_customPluralForm;
-        
-        #endregion
+
+		/// <summary>
+		/// Specifies the direction from the script.
+		/// </summary>
+		[SerializeField]
+		[Tooltip ("Specifies the direction of the text.")]
+		private ScriptDirection m_direction;
+
+		#endregion
 	}
 
 	public enum CultureType
