@@ -1,10 +1,11 @@
 {
-  "name": "games.monogum.bricksbucket.global",
+  "name": "games.javier.upm.bricksbucket.localization",
   "version": "0.0.0",
-  "displayName": "Bricks Bucket Global Package",
-  "description": "Bucket full of bricks to build something great.",
+  "displayName": "Lacalization",
+  "description": "A bucket with a localization solution for assets.",
   "unity": "2019.4",
   "unityRelease": "1f1",
+  "license": "MIT",
   "keywords": [
     "localization",
     "extensions",
@@ -15,7 +16,6 @@
   },
   "author": {
     "name": "Javier García",
-    "email": "javier@monogum.games",
-    "url": "monogum.games"
+    "email": "bricksbucket@javier.games"
   }
 }
