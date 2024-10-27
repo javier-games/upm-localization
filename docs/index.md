@@ -1,0 +1,3 @@
+- [ISO 639](docs/standard_iso639.md)
+- [ISO 3166](docs/standard_iso3166.md)
+- [LCID](docs/standard_lcid.md)
